@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+<h3>以下の内容で送信する</h3>
+<%= form_for(@tweet) do |f| %>
+<%= f.hidden_field :content %>
+<p>ツイート:<%=@tweet.content %></p>
+<%= f.submit "つぶやく",class: 'btn btn-primary btn-block' %>
+<% end %>
+<%= link_to "Tweetを見る", tweets_path %>
+  </div>
+</div>
